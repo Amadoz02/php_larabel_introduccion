@@ -24,7 +24,7 @@ class productFactory extends Factory
         'price' => fake()->randomFloat(2, 10, 1000), // Precio entre 10 y 1000
         'stock' => fake()->numberBetween(0, 100), // Stock entre 0 y 100
         'category_id'=>category::all()->random()->id, // Relación con la categoría
-        'image_id'=>Image::factory()->create()->id, // Relación con la imagen
+        // 'image_id'=>Image::factory()->create()->id, // Relación con la imagen
         
         ];
     }

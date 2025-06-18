@@ -13,22 +13,23 @@ class Product extends Model
      *
      * @var list<string>
      */
-    protected $fillable = [
-        'name',
-        'description',
-        'price',
-        'stock',
-        'category_id',
-        'image_id',
+    // protected $fillable = [
+    //     'name',
+    //     'description',
+    //     'price',
+    //     'stock',
+    //     'category_id',
+    //     // 'image_id',
 
-    ];
+    // ];
 
     public function category()
     {
         return $this->belongsTo(category::class);
     }
-     public function Image()
+
+    public function images()
     {
-        return $this->hasOne(Image::class);
+        return $this->morphMany(Image::class, 'imageable');
     }
 }

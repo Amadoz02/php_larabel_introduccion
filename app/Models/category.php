@@ -13,11 +13,11 @@ class category extends Model
      *
      * @var list<string>
      */
-    protected $fillable = [
-        'name',
-        'description',
+    // protected $fillable = [
+    //     'name',
+    //     'description',
 
-    ];
+    // ];
         public function Product()
     {
         return $this->hasMany(Product::class);
