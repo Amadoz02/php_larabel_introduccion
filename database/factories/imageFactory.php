@@ -3,8 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-$faker = \Faker\Factory::create();
-$faker->addProvider(new \Smknstd\FakerPicsumImages\FakerPicsumImagesProvider($faker));
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
@@ -18,9 +16,12 @@ class imageFactory extends Factory
      */
     public function definition(): array
     {
+        $faker = \Faker\Factory::create();
+        $faker->addProvider(new \Smknstd\FakerPicsumImages\FakerPicsumImagesProvider($faker));
+
         return [
-            // fake()->imageUrl() genera URLs de imágenes
-            "url" => $this->faker->imageUrl($this->faker->numberBetween(600, 1800), $this->faker->numberBetween(600, 1800)),
+            //  genera URLs de imágenes y que no se repitan
+            "url" => $faker->imageUrl(640, 480, false), // genera una URL única de imagen
         ];
     }
 }
