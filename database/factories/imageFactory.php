@@ -21,7 +21,7 @@ class imageFactory extends Factory
 
         return [
             //  genera URLs de imágenes y que no se repitan
-            "url" => $faker->imageUrl(640, 480, false), // genera una URL única de imagen
+            "url" => $faker->imageUrl(800, 620, false), // genera una URL única de imagen
         ];
     }
 }

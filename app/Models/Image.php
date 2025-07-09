@@ -13,11 +13,11 @@ class Image extends Model
      *
      * @var list<string>
      */
-    //  protected $fillable = [
-    //      'url',
+      protected $fillable = [
+         'url',
         
 
-    // ];
+     ];
 
     public function product()
     {

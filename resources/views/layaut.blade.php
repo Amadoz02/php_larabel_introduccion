@@ -9,8 +9,8 @@
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-white shadow">
         <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">@yield('header', 'Header')</h1>
-            
+            <h1 class="text-2xl font-bold flex flex-row gap-5">@yield('header', 'Header')</h1>
+
         </div>
     </header>
 
