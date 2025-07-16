@@ -6,13 +6,16 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
+use Inertia\Inertia;
 
 class PostController extends Controller
 {
     public function index()
     {
         $posts = Post::all();
-        return view('posts', compact('posts'));
+       return Inertia::render('posts/listar', [
+            'posts' => $posts,
+        ]);
     }
 
     public function create()
